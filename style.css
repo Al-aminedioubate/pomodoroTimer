@@ -29,12 +29,18 @@ button{
     border-style: none;
     border-radius: 6px;
     text-align: center;
+    margin-bottom: 30px;
+}
+
+button:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 #startBtn{
   background-color: green;
 }
+
 #stopBtn{
   background-color: red;  
 }
