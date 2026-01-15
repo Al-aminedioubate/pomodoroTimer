@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0.15);
+    border-radius: 20px;
+}
+
+p{
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+button{
+    color: white;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#startBtn{
+  background-color: green;
+}
+#stopBtn{
+  background-color: red;  
+}
+#resetBtn{
+  background-color: grey;  
+}
