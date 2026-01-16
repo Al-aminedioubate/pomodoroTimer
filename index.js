@@ -13,3 +13,8 @@ function stop() {
 function reset() {
 	console.log("La fonction reset est bonne");
 }
+
+//Creation de nos evenements
+startBtn.addEventListener("click", start);
+stopBtn.addEventListener("click", stop);
+resetBtn.addEventListener("click", reset);
