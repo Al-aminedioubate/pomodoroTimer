@@ -25,11 +25,14 @@ p{
 
 button{
     color: white;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
     border-style: none;
-    border-radius: 6px;
+    border-radius: 4px;
     text-align: center;
     margin-bottom: 30px;
+    width: 80px;
+    height: 40px;
 }
 
 button:hover{
@@ -37,15 +40,21 @@ button:hover{
     transform: scale(1.1);
 }
 
+.btn-container{
+  display: flex;
+  gap: 20px;
+}
+
 #startBtn{
   background-color: green;
 }
 
 #stopBtn{
-  background-color: red;  
+  background-color: red;
 }
+
 #resetBtn{
-  background-color: grey;  
+  background-color: grey;
 }
 
 h1{
