@@ -11,20 +11,22 @@ let timer;
 function start() {
 	timer = setInterval(function () {
 		countdown -= 1000;
+		if (countdown <= 0) {
+			clearInterval(timer);
+			return;
+		}
+
+		const minutes = Math.floor(countdown / (1000 * 60));
+		const seconds = Math.floor((countdown % (1000 * 60)) / 1000);
+
+		timerShow.textContent = `${minutes}:${seconds}`;
 	}, 1000);
-
-	if (countdown <= 0) {
-		clearInterval(timer);
-		return;
-	}
-
-	const minutes = Math.floor(countdown / (1000 * 60));
-	const seconds = Math.floor((countdown % (1000 * 60)) / 1000);
 }
 
 function stop() {
-	console.log("La fonction stop est bonne");
+	clearInterval(timer);
 }
+
 function reset() {
 	console.log("La fonction reset est bonne");
 }
