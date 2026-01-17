@@ -5,14 +5,18 @@ let stopBtn = document.getElementById("stopBtn");
 
 let timerShow = document.getElementById("timerShow");
 
+//ajoutons un son d'alarm au timer.
+const monSon = new Audio("alarm.mp3");
+
 //creation des fonction pour la fonctionnalite des btns
-let countdown = 25 * 60 * 1000; //on converti 25mn en ms
+let countdown = 3 * 60 * 1000; //on converti 25mn en ms
 let timer;
 function start() {
 	timer = setInterval(function () {
 		countdown -= 1000;
 		if (countdown <= 0) {
 			clearInterval(timer);
+			monSon.play();
 			return;
 		}
 
