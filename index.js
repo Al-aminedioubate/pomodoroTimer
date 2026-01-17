@@ -3,10 +3,25 @@ let resetBtn = document.getElementById("resetBtn");
 let startBtn = document.getElementById("startBtn");
 let stopBtn = document.getElementById("stopBtn");
 
+let timerShow = document.getElementById("timerShow");
+
 //creation des fonction pour la fonctionnalite des btns
+let countdown = 25 * 60 * 1000; //on converti 25mn en ms
+let timer;
 function start() {
-	console.log("La fonction start est bonne");
+	timer = setInterval(function () {
+		countdown -= 1000;
+	}, 1000);
+
+	if (countdown <= 0) {
+		clearInterval(timer);
+		return;
+	}
+
+	const minutes = Math.floor(countdown / (1000 * 60));
+	const seconds = Math.floor((countdown % (1000 * 60)) / 1000);
 }
+
 function stop() {
 	console.log("La fonction stop est bonne");
 }
