@@ -9,7 +9,7 @@ let timerShow = document.getElementById("timerShow");
 const monSon = new Audio("alarm.mp3");
 
 //creation des fonction pour la fonctionnalite des btns
-let countdown = 3 * 60 * 1000; //on converti 25mn en ms
+let countdown = 25 * 60 * 1000; //on converti 25mn en ms
 let timer;
 function start() {
 	timer = setInterval(function () {
@@ -17,6 +17,7 @@ function start() {
 		if (countdown <= 0) {
 			clearInterval(timer);
 			monSon.play();
+			//timerShow.textContent = `25:00`;
 			return;
 		}
 
