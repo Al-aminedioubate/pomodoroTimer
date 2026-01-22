@@ -20,14 +20,14 @@ function start() {
 			return;
 		}
 
-		updatTimer();
+		updatTimer(countdown);
 	}, 1000);
 }
 
-function updatTimer() {
+function updatTimer(ms) {
 	//convertisons la valeur de countdown en seconde et en minutes
-	const minutes = Math.floor(countdown / (1000 * 60));
-	const seconds = Math.floor((countdown % (1000 * 60)) / 1000);
+	const minutes = Math.floor(ms / (1000 * 60));
+	const seconds = Math.floor((ms % (1000 * 60)) / 1000);
 
 	timerShow.textContent = `${minutes}:${seconds}`;
 }
@@ -40,6 +40,8 @@ function stop() {
 //La fonction permettant de remettre le timer a valeur initiale qui est 25:00
 function reset() {
 	clearInterval(timer);
+	//countdown = 0;
+	updatTimer(0);
 	timerShow.textContent = `25:00`;
 }
 
