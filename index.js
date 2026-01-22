@@ -17,7 +17,6 @@ function start() {
 		if (countdown <= 0) {
 			clearInterval(timer);
 			monSon.play();
-			//timerShow.textContent = `25:00`;
 			return;
 		}
 
