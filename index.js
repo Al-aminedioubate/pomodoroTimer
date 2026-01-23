@@ -12,6 +12,7 @@ const monSon = new Audio("alarm.mp3");
 let countdown = 1500; // equivaut a 25 minutes en secondes
 let timer;
 
+//la fonction permettant de faire le calcul du temps et la mise a jour du timer
 function updatTimer() {
 	//convertisons la valeur de countdown en seconde et en minutes
 	let minutes = Math.floor(countdown / 60);
@@ -22,6 +23,7 @@ function updatTimer() {
 		.padStart(2, "0")}`;
 }
 
+//La fonction permettant de demarrer le timer
 function startTimer() {
 	timer = setInterval(function () {
 		countdown--;
